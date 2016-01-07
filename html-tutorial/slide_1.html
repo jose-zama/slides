@@ -1,112 +1,155 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>Taller Introducción HTML – Sesión 1</title>
+        <title>Taller Introducción HTML – Sesión 1</title>
 
-		<meta name="description" content="Taller de introducción a HTML. Sesión 1.">
-		<meta name="author" content="José Zamudio">
+        <meta name="description" content="Taller de introducción a HTML. Sesión 1.">
+        <meta name="author" content="José Zamudio">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="../reveal/css/reveal.css">
-		<link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">		
+        <link rel="stylesheet" href="../reveal/css/reveal.css">
+        <link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">		
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+        <style>
+            .device{
+                border-radius: 100% !important;
+                border: none !important;
+            }
+        </style>
 
-		<!--[if lt IE 9]>
-		<script src="../reveal/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="../reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>HTML</h1>
-					<h3>Taller de introducción a HTML</h3>
-					<h4>Sesión 1</h4>
-					<p>
-						<small><a href="http://jose-zama.github.io/">José Zamudio</a></small>
-					</p>
-				</section>
-				
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							## ¿Qué es HTML?
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>HTML</h1>
+                    <h3>Taller de introducción a HTML</h3>
+                    <h4>Sesión 1</h4>
+                    <p>
+                        <small><a href="http://jose-zama.github.io/">José Zamudio</a></small>
+                    </p>
+                </section>
 
-							HTML es el acrónimo de *HyperText Markup Language*; en español *Lenguaje de marcado de hipertexto*
+                <!-- ************ WHAT IS HTML SLIDES*********************-->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## ¿Qué es HTML?
 
-							Y esta definido como:
-							
-							> El lenguaje principal de la *web* para crear **documentos y aplicaciones** para usarlo por **todos**, **donde sea**
-							
-						</script>
-					</section>
-					
-					<section>
-						<h3>Documentos</h3>
-						<ul class="fragment">
-							<li>Blogs</li>
-							<li><a href="http://jose-zama.github.io">Paginas personales</a></li>
-						</ul>
-						<p><br></p>
-						<h3 class="fragment">Aplicaciones</h3>
-						<ul class="fragment">
-							<li>Facebook</li>
-							<li>Portal de un banco</li>
-							<li>Juegos</li>
-						</ul>
-					</section>
-				</section>
+                            HTML es el acrónimo de *HyperText Markup Language*; en español *Lenguaje de marcado de hipertexto*
 
-				
-		<script src="../reveal/lib/js/head.min.js"></script>
-		<script src="../reveal/js/reveal.js"></script>
+                            Y esta definido como:
 
-		<script>
+                            > El lenguaje principal de la *web* para crear **documentos y aplicaciones** para usarlo por **todos**, **donde sea**
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+                        </script>
 
-				transition: 'convex', // none/fade/slide/convex/concave/zoom
+                    </section>
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: '../reveal/plugin/notes/notes.js', async: true }
-				]
-			});
+                    <section  data-background="./assets/emma.gif">
+                        <p>ee... aja... si...</p>
+                    </section>
 
-		</script>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Documentos
 
-	</body>
+
+                            - Blogs <!-- .element: class="fragment" data-fragment-index="1" -->
+                            - <!-- .element: class="fragment" data-fragment-index="1" --><a href="http://jose-zama.github.io" target="_blank">Paginas personales</a> <!-- .element: class="fragment" data-fragment-index="1" -->
+                            - Presentaciones <!-- .element: class="fragment" data-fragment-index="1" -->
+
+
+                            <br>
+
+                            ### Aplicaciones<!-- .element: class="fragment" data-fragment-index="2" -->
+
+                            - Facebook<!-- .element: class="fragment" data-fragment-index="3" --> 
+                            - Portal de un banco<!-- .element: class="fragment" data-fragment-index="3" -->
+                            - Juegos<!-- .element: class="fragment" data-fragment-index="3" -->
+                        </script>
+                    </section>
+
+                    <section>
+                        <h3>Multiplataforma</h3>
+                        <a href="http://www.pelfusion.com"><!-- images licence requirement -->
+                            <img src="./assets/pc.png" alt="Computadora" class="device">
+                            <img src="./assets/tablet.png" alt="Tablet" class="device">
+                            <img src="./assets/mobile.png" alt="Smartphone" class="device">
+                        </a>
+                        
+                        <div class="fragment">
+                            <p>Y para usarse en cualquier parte del mundo</p>
+                            <a  href="http://www.aha-soft.com/"><!-- images licence requirement -->
+                            <img src="./assets/planet.png" alt="Mundo conectado" class="device">
+                        </a>
+                        </div>
+                    </section>
+
+                </section>
+
+                <!-- ************ WHAT IS HTML SLIDES*********************-->
+
+                <script src="../reveal/lib/js/head.min.js"></script>
+                <script src="../reveal/js/reveal.js"></script>
+
+                <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    {src: '../reveal/lib/js/classList.js', condition: function () {
+                            return !document.body.classList;
+                        }},
+                    {src: '../reveal/plugin/markdown/marked.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/markdown/markdown.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: '../reveal/plugin/zoom-js/zoom.js', async: true},
+                    {src: '../reveal/plugin/notes/notes.js', async: true}
+                ]
+            });
+
+                </script>
+            </div>
+        </div>
+    </body>
 </html>
