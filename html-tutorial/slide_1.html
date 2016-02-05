@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="../reveal/css/reveal.css">
-        <link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">		
+        <link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">     
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
@@ -72,7 +72,9 @@
                     </section>
 
                     <section  data-background="./assets/emma.gif">
-                        <p>ee... aja... si...</p>
+                        <a href="http://replygif.net/1248">
+                            <p style="color: #fff;">ee... aja... si...</p>
+                        </a>
                     </section>
 
                     <section data-markdown>
@@ -102,19 +104,150 @@
                             <img src="./assets/tablet.png" alt="Tablet" class="device">
                             <img src="./assets/mobile.png" alt="Smartphone" class="device">
                         </a>
-                        
+
                         <div class="fragment">
                             <p>Y para usarse en cualquier parte del mundo</p>
                             <a  href="http://www.aha-soft.com/"><!-- images licence requirement -->
-                            <img src="./assets/planet.png" alt="Mundo conectado" class="device">
-                        </a>
+                                <img src="./assets/planet.png" alt="Mundo conectado" class="device">
+                            </a>
                         </div>
                     </section>
 
                 </section>
 
                 <!-- ************ WHAT IS HTML SLIDES*********************-->
+                
+                <!-- ************ MARKUP LANGUAGE SLIDES*********************-->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Lenguaje de marcado
+                            
+                            Como lenguaje, HTML debe seguir una serie de reglas de **sintaxis** y **semántica**.
+                            
+                            En HTML se usa un conjunto definido de anotaciones, llamados elementos, para <!-- .element: class="fragment" data-fragment-index="1" --> **describir** un documento.
 
+                            Aplicaciones como navegadores <!-- .element: class="fragment" data-fragment-index="2" --> *entienden* dichos documentos y los presenta al usuario
+                            
+                        </script>
+
+                    </section>
+
+                    <section>
+                        <h3>El documento HTML más pequeño</h3>
+                        <pre><code class="html" >                       
+                            &lt;html&gt;
+                                &lt;head/&gt;
+                                &lt;body/&gt;
+                            &lt;/html&gt;
+                        </code></pre>
+                        
+                        <p class="fragment">Consiste en <strong>3</strong> elementos: <i>html</i>, <i>head</i> y <i>body</i></p>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Elementos HTML
+                            
+                            #### html
+                            
+                            Representa la raíz del documento.
+                            
+                            #### head <!-- .element: class="fragment" data-fragment-index="1" -->
+                            
+                            Contiene metadatos del documento. Estos dan soporte y/o dan información acerca del documento.<!-- .element: class="fragment" data-fragment-index="1" -->
+                                    
+                            #### body <!-- .element: class="fragment" data-fragment-index="2" -->
+                            
+                            En donde el contenido se encuentra realmente. <!-- .element: class="fragment" data-fragment-index="2" --> 
+                            
+                        </script>
+
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### ¿Cómo reconozco un elemento HTML?
+                            - Estan delimitados por un **etiqueta de inicio** y una **etiqueta de fin**.
+                            - Dichas etiquetas se les conoce mejor en inglés como **tags**         
+                            
+                        </script>
+
+                    </section>
+                    
+                    <section  data-background="./assets/krysten.gif">
+                        <a href="http://replygif.net/871">
+                            <p style="color: #fff;">¿¡Y que es un tag!?</p>
+                        </a>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### ¿Cómo reconozco un tag?
+                            
+                            #### De inicio (start tag)
+
+                            - Empiezan con " **&lt;** " 
+                            - <!-- .element: class="fragment" data-fragment-index="2" --> Seguido del **nombre** de la etiqueta. 
+                            - <!-- .element: class="fragment" data-fragment-index="3" --> Seguido de cero o más **atributos** (...lo veremos mas tarde) 
+                            - <!-- .element: class="fragment" data-fragment-index="4" --> Y termina con " **&gt;** "  
+
+                            <pre><code class="html" data-trim data-noescape>
+                                &lt;<span class="fragment" data-fragment-index="2">html</span><span class="fragment" data-fragment-index="4">&gt;</span>
+                            </code></pre>
+
+                        </script>
+
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### ¿Cómo reconozco un tag?
+                                                       
+                            #### De fin (end tag)
+
+                            - Empiezan con " **&lt;** " 
+                            - <!-- .element: class="fragment" data-fragment-index="2" --> Seguido de " **/** " 
+                            - <!-- .element: class="fragment" data-fragment-index="3" --> Seguido del **nombre** de la etiqueta.
+                            - <!-- .element: class="fragment" data-fragment-index="4" --> Y termina con un " **&gt;** "  
+
+                            <pre><code class="html" data-trim data-noescape>
+                                &lt;<span class="fragment" data-fragment-index="2">/</span><span class="fragment" data-fragment-index="3">html</span><span class="fragment" data-fragment-index="4">&gt;</span>
+                            </code></pre>
+                            
+                        </script>
+
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### ¿Cómo reconozco un tag?
+                                                       
+                            #### ... y los de inicio que se cierran solitos (self-closing)
+                            
+                            - Empiezan con " **&lt;** " 
+                            - <!-- .element: class="fragment" data-fragment-index="2" --> Seguido del **nombre** de la etiqueta. 
+                            - <!-- .element: class="fragment" data-fragment-index="3" --> Seguido de cero o más **atributos** (...lo veremos mas tarde) 
+                            - <!-- .element: class="fragment" data-fragment-index="4" --> Seguido de " **/** "   
+                            - <!-- .element: class="fragment" data-fragment-index="5" --> Y termina con " **&gt;** "  
+
+                            <pre><code class="html" data-trim data-noescape>
+                                &lt;<span class="fragment" data-fragment-index="2">html</span><span class="fragment" data-fragment-index="4">/</span><span class="fragment" data-fragment-index="5">&gt;</span>
+                            </code></pre>
+                            
+                        </script>
+
+                    </section>
+
+                </section>
+
+                <!-- ************ MARKUP LANGUAGE SLIDES*********************-->
+
+                <!-- ************ tree structure SLIDES*********************-->
+                
+                <!-- ************ error handling SLIDES*********************-->
+                <!-- talk about una buena y una mala -->
+                
                 <script src="../reveal/lib/js/head.min.js"></script>
                 <script src="../reveal/js/reveal.js"></script>
 
