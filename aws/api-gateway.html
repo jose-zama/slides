@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>API Gateway</title>
+
+        <meta name="description" content="API Gateway - AWS Certification">
+        <meta name="author" content="José Zamudio">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="../reveal/css/reveal.css">
+        <link rel="stylesheet" href="../reveal/css/theme/simple.css" id="theme">     
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+        <style>
+            .device{
+                border-radius: 100% !important;
+                border: none !important;
+            }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="../reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/blog/aws-api-gateway-icon.png">
+                    <h1>API Gateway</h1>
+                    <h3>AWS Certification</h3>
+                    <h4>Thermofisher</h4>
+                    <p>
+                        <small><a href="http://jose-zama.github.io/">José Zamudio</a></small>
+                    </p>
+                </section>
+
+                <!-- Intro -->
+                <section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## **Brief intro**
+
+                            Amazon API Gateway is a service that:
+
+                            > makes it easy for developers to **create, publish, maintain, monitor, and secure APIs** at any scale
+
+                        </script>
+                    </section>
+                    <section data-separator-notes="^Note:" data-markdown>
+                        <script type="text/template">
+                            ### Advantages
+
+                            - Low cost
+                            - Performance at any scale
+                            - Easy monitoring
+                            - Streamline API Development
+                            - Flexible security controls
+                            - Create RESTful Endpoints for Existing Services
+                            - APIs without servers 
+
+                            Note:
+                            - Low cost (Pay for api calls and data transfered out)
+                            - Performance at any scale (Low latency due to worlwide edge locations, cache avoid going to backend)
+                            - Easy monitoring (visually with Amazon CloudWatch)
+                            - Streamline API Development (lets simultaneously run multiple versions same API - quicliy iterate, test, and release)
+                            - Flexible security controls (Tools to authorize access such as IAM and Amazon Cognito through signed API calls)
+                            - RESTful Endpoints (Transformation capabilities)
+                            - APIs without servers (Integrates seamlessly with AWS Lambda)
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Key definitions -->
+                <section>
+                    <section data-separator-notes="^Note:" data-markdown>
+                        <script type="text/template">
+                            ## **Key definitions**
+
+                            ### API Gateway control service
+
+                            > Lets you create a RESTful API to expose back-end features 
+
+                            ### API Gateway execution service
+
+                            > Lets an app call the API to access the exposed back-end features
+
+                            Note:
+                            - The back end can be another AWS service, such as AWS Lambda or Amazon DynamoDB, or it can be an existing web application.
+                            - The app can interact with the API using standard HTTP protocols or using a platform- or language-specific SDK generated by the API creator.
+                        </script>
+                    </section>
+                    <section data-separator-notes="^Note:" data-markdown>
+                        <script type="text/template">
+                            ## **Key definitions**
+
+                            ### Resource
+
+                            > logical entity that can be accessed through a resource path using the API
+
+                            ### Method
+
+                            > A combination of a **resource path** and an **operation**
+
+                            Note:
+                            - The API you create in API Gateway consists of a set of resources and methods
+                            - A resource can have one or more operations that are defined by appropriate HTTP verbs such as GET, POST, and DELETE
+                            - Each method corresponds to a REST API request submitted by the user of your API and the corresponding response returned to the user
+                        </script>
+                    </section>
+                    <section data-separator-notes="^Note:" data-markdown>
+                        <script type="text/template">
+                            ## **Key definitions**
+
+                            ### Method request/response
+
+                            > API definition exposed to users
+
+                            ### Integration request/response
+
+                            > How the API gateway interacts with the back end (e.g. Lambda, HTTP, AWS service or mock)
+
+                            Note:
+                            - Method request includes authorization and HTTP verbs, headers, body an query string
+                            - Method response includes HTTP status code
+                            - Integration Request can also do data transformations
+                            - Integration response intercepts back end response. Lambda errors or HTTP status codes can be mapped to Method response status codes
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Cost -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Permissions/IAM
+
+                            API managing service as **apigateway**
+                                    
+                            - Actions
+                                - GET 
+                                - POST 
+                                - PUT 
+                                - PATCH
+                                - DELETE 
+                                - OPTIONS 
+                                - HEAD 
+                        
+                            _Resource Format_
+                            
+                                arn:aws:apigateway:region::resource-path-specifier
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Permissions/IAM
+
+                            API executing service **execute-api**
+                            
+                            - Actions
+                                - Invoke
+                                - InvalidateCache
+                        
+                            _Resource Format_
+                            
+                                arn:aws:execute-api:region:account-id:api-id/stage-name/HTTP-VERB/resource-path-specifier
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Permissions/IAM
+                            
+                            API Managing service **read permissions** policy statement
+                            
+                                {
+                                    "Version": "2012-10-17",
+                                    "Statement": [
+                                      {
+                                        "Effect": "Allow",
+                                        "Action": [
+                                          "apigateway:GET"
+                                        ],
+                                        "Resource": [
+                                          "arn:aws:apigateway:us-east-1::/restapis/a123456789/*"
+                                        ]
+                                      }
+                                    ]
+                                }
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Permissions/IAM
+                            
+                            API Executing service **permission to call** any `POST` method along the path of `mydemoresource`
+                            
+                                {
+                                    "Version": "2012-10-17",
+                                    "Statement": [
+                                      {
+                                        "Effect": "Allow",
+                                        "Action": [
+                                          "execute-api:Invoke"
+                                        ],
+                                        "Resource": [
+                                          "arn:aws:execute-api:us-east-1:*:a123456789/test/POST/mydemoresource/*"
+                                        ]
+                                      }
+                                    ]
+                                }
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Limits -->
+                <section>
+                    <section >
+                        <h3>API Gateway Limits for Configuring and Running an API</h3>
+
+                        <table  style="font-size:  17px;"><colgroup><col class="col1"><col class="col2"><col class="col3"></colgroup><thead><tr><th>Resource or Operation</th><th>Default Limit</th><th>Can Be Increased</th></tr></thead><tbody><tr><td>Account-level throttling rate</td><td>1000 request per second (rps) with a burst limit of 2000 rps.</td><td>Yes</td></tr><tr><td>APIs per account</td><td>60</td><td>Yes</td></tr><tr><td>API keys per account</td><td>10,000</td><td>Yes</td></tr><tr><td>Custom authorizers per API</td><td>10</td><td>Yes</td></tr><tr><td>Client certificates per account</td><td>60</td><td>Yes</td></tr><tr><td>Resources per API </td><td>300</td><td>Yes</td></tr><tr><td>Stages per API</td><td>10</td><td>Yes</td></tr><tr><td>API caching TTL</td><td>300 seconds by default and configurable between 0 and 3600 by an API owner.</td><td>Not for the upper bound (3600)</td></tr><tr><td>Integration timeout</td><td>30 second for both Lambda and HTTP integrations.</td><td>No</td></tr><tr><td>Payload size</td><td>10 MB</td><td>No</td></tr><tr><td>Number of iterations in a <code class="code">#foreach ... #end</code> loop in mapping
+						templates</td><td>1000</td><td>No</td></tr><tr><td>ARN length of a method with authorization</td><td>1600 bytes</td><td>No</td></tr></tbody></table>
+                        
+                        <p style="font-size: 14px;">
+                            <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-limits.html">
+                               http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-limits.html
+                            </a>
+                        </p>
+                        
+                        <aside class="notes">
+                            Only for Console
+                        </aside>
+                    </section>
+                    <section >
+                        <h3>API Gateway Limits for Creating, Deploying and Managing an API</h3>
+
+                        <table style="font-size:  17px;"><colgroup><col class="col1"><col class="col2"></colgroup><thead><tr><th>Action</th><th>Default Limit</th><th>Can Be Increased</th></tr></thead><tbody><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/" target="_blank">CreateRestApi</a></td><td>2 requests per minute (rpm) per account.</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-import/" target="_blank">ImportRestApi</a></td><td>2 requests per minute per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-put/" target="_blank">PutRestApi</a></td><td>60 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-delete/" target="_blank">DeleteRestApi</a></td><td>2 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/deployment-create/" target="_blank">CreateDeployment</a></td><td>3 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/account-update/" target="_blank">UpdateAccount</a></td><td>3 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-resources/" target="_blank">GetResources</a></td><td>150 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/resource-create/" target="_blank">CreateResource</a></td><td>300 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/resource-delete/" target="_blank">DeleteResource</a></td><td>300 requests per minutes per account</td><td>No</td></tr><tr><td><a class="ulink" href="http://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/" target="_blank">CreateDomainName</a></td><td>2 requests per minutes per account</td><td>No</td></tr></tbody></table>
+                        
+                        
+                        <p style="font-size: 14px;">
+                            <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-limits.html">
+                               http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-limits.html
+                            </a>
+                        </p>
+                        
+                        <aside class="notes">
+                            For console, CLI, and REST API SDK
+                        </aside>
+                    </section>
+                </section>
+                
+                <!-- Cost -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Cost
+
+                            - **no** minimum fees or startup costs
+                            - pay only for the **API calls** you receive and the **amount of data transferred out**
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Cost (N. Virginia)
+                            
+                            - $3.50 per million API calls received
+                            - Amazon API Gateway Data-Transfer-Out Rates
+                                - $0.09/GB for the first 10 TB
+                                - $0.085/GB for the next 40 TB
+                                - $0.07/GB for the next 100 TB
+                                - $0.05/GB for the next 350 TB
+                        
+                            <p style="font-size: 16px;">
+                                <a href="https://aws.amazon.com/api-gateway/pricing/">
+                                   https://aws.amazon.com/api-gateway/pricing/
+                                </a>
+                            </p>
+                        </script>
+                    </section>
+                    <section>
+                        <h2>Cost (N. Virginia)</h2>
+                            
+                        <h3>Caching</h3>
+                            
+                        <table style="font-size: 24px;"> 
+                      <tbody> 
+                       <tr> 
+                        <td style="text-align: center;"><b>Cache Memory Size (GB)</b></td> 
+                        <td style="text-align: center;"><b>Price per Hour</b></td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">0.5</td> 
+                        <td style="text-align: center;">$0.020</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">1.6</td> 
+                        <td style="text-align: center;">$0.038</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">6.1</td> 
+                        <td style="text-align: center;">$0.200</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">13.5</td> 
+                        <td style="text-align: center;">$0.250</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">28.4</td> 
+                        <td style="text-align: center;">$0.500</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">58.2</td> 
+                        <td style="text-align: center;">$1.000</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">118.0</td> 
+                        <td style="text-align: center;">$1.900</td> 
+                       </tr> 
+                       <tr> 
+                        <td style="text-align: center;">237.0</td> 
+                        <td style="text-align: center;">$3.800</td> 
+                       </tr> 
+                      </tbody> 
+                     </table>
+                        <p style="font-size: 16px;">
+                            <a href="https://aws.amazon.com/api-gateway/pricing/">
+                               https://aws.amazon.com/api-gateway/pricing/
+                            </a>
+                        </p>
+                    </section>
+                </section>
+
+                <!-- DEMO -->
+                <section>
+                    <!-- Use case -->
+                        <section data-markdown>
+                            <script type="text/template">
+                                ## Serverless website
+
+                                ![serveless](http://image.slidesharecdn.com/awsmarch2016webinarseriesgettingstartedwithserverlessarchitectures-160405032212/95/aws-march-2016-webinar-series-getting-started-with-serverless-architectures-29-638.jpg?cb=1459826552)
+
+                                <small>[http://www.slideshare.net/AmazonWebServices/aws-march-2016-webinar-series-getting-started-with-serverless-architectures](http://www.slideshare.net/AmazonWebServices/aws-march-2016-webinar-series-getting-started-with-serverless-architectures)</small>
+                            </script>
+
+                        </section>
+                    
+                    <section data-background-image="http://i.imgur.com/wF9NrAg.gif">
+                        <a href="http://imgur.com/gallery/wF9NrAg">
+                            <p style="color: #fff;">Demo? not necessary</p>
+                        </a>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Console
+                            ![Api gateway](assets/api.png)
+                            Console make calls to **API Gateway Control Service API**
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Best practices -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Best practices
+
+                            1. Use mock integrations
+                            2. Combine with Cognito for managed end user-based access control
+                            3. Use stage variables (**inject API config values into Lambda functions for logging, behaviour**)
+                            4. Use request/response mapping templates everywhere within reason. Not passthrough.
+                            5. Take ownership of HTTP response codes.
+                            6. Use [Swagger](http://swagger.io/getting-started/) import/export for cross-account sharing 
+
+                            <small>[http://www.slideshare.net/AmazonWebServices/aws-march-2016-webinar-series-getting-started-with-serverless-architectures](http://www.slideshare.net/AmazonWebServices/aws-march-2016-webinar-series-getting-started-with-serverless-architectures)</small>
+                        </script>
+
+                    </section>
+                </section>
+
+                <!-- Things to remember -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Keep in mind
+
+                            1. An API is published until it is **deployed**
+                            2. Dont forget Cross-Origin Resource Sharing (CORS)
+                            3. You can have and deploy to different stages (dev, test, prod,...)
+
+                        </script>
+
+                    </section>
+                </section>
+                
+                <section data-background-image="http://i.giphy.com/3orif4UT0XsnJrviIU.gif">
+                        <a href="http://gph.is/1UcHd1T">
+                            <p style="color: #fff;">No questions?, ok then</p>
+                        </a>
+                    </section>
+
+                <script src="../reveal/lib/js/head.min.js"></script>
+                <script src="../reveal/js/reveal.js"></script>
+
+                <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    {src: '../reveal/lib/js/classList.js', condition: function () {
+                            return !document.body.classList;
+                        }},
+                    {src: '../reveal/plugin/markdown/marked.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/markdown/markdown.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: '../reveal/plugin/zoom-js/zoom.js', async: true},
+                    {src: '../reveal/plugin/notes/notes.js', async: true}
+                ]
+            });
+
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
