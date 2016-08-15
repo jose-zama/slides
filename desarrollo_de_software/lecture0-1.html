@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Software development</title>
+
+        <meta name="description" content="API Gateway - AWS Certification">
+        <meta name="author" content="José Zamudio">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="../reveal/css/reveal.css">
+        <link rel="stylesheet" href="../reveal/css/theme/simple.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+        <style>
+            .device{
+                border-radius: 100% !important;
+                border: none !important;
+            }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="../reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Introduction</h1>
+                    <h3>SI401 - Proceso de Desarrollo de Software</h3>
+                    <h4>Week 1 - Lecture 1</h4>
+                    <h4>CETYS</h4>
+                    <p>
+                        <small><a href="http://jose-zama.github.io/">José A. Zamudio</a></small>
+                        <br>
+                        <small><a href="pepeazb@gmail.com">pepeazb@gmail.com</a></small>
+                    </p>
+                </section>
+
+                <!-- Me -->
+                <section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## About Me
+
+                            - New kid on the block
+                            - Electronic engineer - *ITESM Toluca*
+                            - 5+ years as **Software Engineer/Developer**
+                                - Mostly on Web applications
+                                - & middeware applications
+                            - MSc in Advanced Computer Sciences - *University of Manchester*
+                                - Advanced Web technologies
+                                - **Software Engineering**
+                            - Working at *Thermofisher*
+                                - Applying **Scrum and Agile practices**
+
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Agenda -->
+                <section>
+                    <section data-separator-notes="^Note:" data-markdown>
+                        <script type="text/template">
+                            ## Agenda
+
+                            - About me
+                            - Course description
+                            - Project
+                            - Software Development
+                            - Quiz test
+
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Course -->
+                <section>
+                    <section data-background="./assets/welcome.gif">
+                        <a href="https://m.popkey.co/af8654/MM856.gif">
+                            <h3 style="color: #fff;">Welcome to <b>Software Development Process</b></h3>
+                        </a>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Course key dates
+
+                            |                |            |
+                            |----------------------|-----------------|
+                            | Starts               | Aug 8           |
+                            | Last lecture         | Nov 30          |
+                            | Project Sprint 1     | Aug 15          |
+                            | First period exam    | Sep 21          |
+                            | Second period exam   | Oct 19          |
+                            | Final evaluation     | Dec 5 to Dec 12 |
+                            | *Project final assessment | Dec 5           |
+                            | *Final exam          | Dec 7           |
+
+                            *Tentative
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Assessment
+
+                            - **50** project
+                                - **40** Sprints assessment - 5 point each
+                                - **10** Final assessment
+                            - **40** exams
+                                - **10** Period 1
+                                - **10** Period 2
+                                - **20** Final exam
+                            - **10** homework
+
+                            <small>*Plus extra points from quizzes*</small>
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Assessment
+
+                            - **30** Period 1
+                                - **15** Sprints
+                                - **10** Exam
+                                - **5**  Homework
+                            - **20** Period 2
+                                - **10** Sprints
+                                - **10** Exam
+                            - **50** Period 3
+                                - **15** Sprints
+                                - **10** Final project assessment
+                                - **20** Final exam
+                                - <!-- .element: class="fragment" data-fragment-index="1" -->**5** Homework
+
+                        </script>
+                    </section>
+
+                    <section data-background="./assets/think.gif">
+                        <a href="http://giphy.com/gifs/kQ3FSVoJrkYWk">
+                            <h3 style="color: #fff;">What do you think <b>software process activities</b> are</h3>
+                        </a>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Syllabus
+
+                            1. SE Intro and Scrum
+                            2. Software processes
+                            3. Agile software development
+                            4. Requirements engineering
+                            5. System modelling
+                            6. Architectural design
+                            7. Design and implementation
+                            8. Software testing
+                            9. Software evolution
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Keep always in mind
+
+                            - \>12 absences, that is 6 lectures = fail
+                            - \>= to 70 to pass
+                            - **NO plagiarism**
+                            - Be honest (Sprint reviews and retrospectives)
+                            - Respect deadlines (i.e. end of sprints)
+                            - Maintain a good communication with me
+                            - and...
+
+                        </script>
+                    </section>
+                    <section >
+                            <img src="./assets/calm.png" alt="Keep calm" >
+                    </section>
+                </section>
+
+                <!-- Project -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Project (1)
+
+                            - Develop a software product
+                            - Along with another course project or ****
+                            - your own product -> talk to me first
+                            - Under **Scrum** and **Agile** development frameworks
+                            - It is a **TEAM PROJECT**
+
+                            Homework -> You are responsible to check if you can
+                            Deadline -> **Next Monday 15th**
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Project (2)
+
+                            - Divided in **8 sprints** of 2 weeks each
+                            - Will learn a new agile practice each sprint **and will be assessed**
+                            - **Professor** - > Scrum Master and Customer(if it is the case)
+                            - **You** - > Team and Product owner
+                                - Teams of four members
+                                - Rotating product owner
+                            - Assessment on every sprint throughout the course
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Project plan
+
+                            - Starts Aug 15
+                            - 1-3 sprints - > First period
+                            - 4-5 sprints - > Second period
+                            - 6-8 sprints - > Third period
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Sprints organization
+
+                            - Starting with
+                                - previous Sprint review & retrospective + assessment
+                                - Sprint planning
+                            - Lectures
+                            - Agile practice for next sprint
+                                - Usually in last lecture of sprint
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Sprint Assessment
+
+                            - **1 point** - Agile practice assessment
+                            - **2 points** - Working incremental product (i.e. features implemented)
+                                - Demo
+                                - Tests
+                            - **1 point** - Proof of sprint planning, review and retrospective
+                            - **1 point** - Scrum artifacts proof
+                                - Product backlog
+                                - Sprint backlog
+                                - Burndown chart
+
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Questions?
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Software development</h1>
+                        <a href="http://dilbert.com/strip/1995-01-20">
+                            <img src="./assets/cartoons/se.gif" alt="engineering" >
+                        </a>
+                        <small>http://dilbert.com/strip/1995-01-20</small>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Why Software engineering (1)
+
+                            - Increasing demand for software <!-- .element: class="fragment" data-fragment-index="1" -->
+                                - Technology boom in last years
+                                - Systems become more complex
+                                - Delivered quickly
+                                - Faster and reliable
+                            - Good software engineering lead to good software <!-- .element: class="fragment" data-fragment-index="2" -->
+                            - SE involves <!-- .element: class="fragment" data-fragment-index="3" -->
+                                - Theories
+                                - Methods
+                                - Processes
+                                - Patterns
+                                - Tools
+                            - Who has applied Software engineering? <!-- .element: class="fragment" data-fragment-index="4" -->
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Why Software engineering (2)
+
+                            - Software development is often expensive
+                            - And needs maintenance once is released <!-- .element: class="fragment" data-fragment-index="1" -->
+                            - SE is concerned with cost-effective software development <!-- .element: class="fragment" data-fragment-index="2" -->
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## What is Software engineering?
+
+                            Sommerville:
+                            > Engineering discipline that is concerned with all aspects of software production
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## What is Software engineering?
+
+                            - Use of theories and methods to solve problems
+                            - Bear in mind organizational and financial constraints <!-- .element: class="fragment" data-fragment-index="1" -->
+                                - Hardly you will get unlimited resources
+                            - Besides the software production, it also considers <!-- .element: class="fragment" data-fragment-index="2" -->
+                                - Project management
+                                - Development of tools or methods
+                                - Application of techniques, patterns
+                                - And anything necessary to support the development
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Software production
+
+                            1. Generic products <!-- .element: class="fragment" data-fragment-index="1" -->
+                                - Products that are sold to any customer
+                                - Developers owns the product
+                                - Internal customers
+                                - Examples?
+                            2. Customized products <!-- .element: class="fragment" data-fragment-index="2" -->
+                                - For a specific customer to meet their needs
+                                - Customer owns the product **but** developer is still the expert
+                                - External customers
+                                - Examples?
+
+                            Note:
+                            - Thermofisher example
+                            - Generic products: Any commercial software you see on stores
+                            - Customized products: Embedded systems, bank solutions,mostly all critical systems
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Application types (1)
+
+                            - **Stand alone**
+                                - Runs on local computer
+                                - No need to be connected to a network
+                            - **Interactive transaction-based applications**
+                                - Executed remotely
+                                - Access through clients
+                            - **Embedded control systems**
+                                - To control hardware devices
+                            - **Batch processing systems**
+                                - Processing of lots of data
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Application types (2)
+
+                            - **Entertainment systems**
+                            - **Systems for modeling and simulation**
+                                - Widely used by scientists and engineers for research
+                            - **Data collection**
+                                - Collect data form environment using sensors
+                            - **Systems of systems**
+                                - Those systems that are composed of other systems
+
+                            Note:
+                            Another type? what about IoT
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Essential attributes of good software
+
+                            - **Maintainability** How easy is to make a change to the product
+                            - **Dependability** How reliable and secure is the software in case of an incident
+                            - **Efficiency** How many resources the software use
+                            - **Acceptability** How understandable, usable and compatible the software is
+
+                            Note:
+                            - **Efficiency** Processor and memory
+                            - Do you know another software attibute? e.g Scalability
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## High level Software process activities
+
+                            - **Software specification** What to develop
+                            - **Software development** The software is designed and built
+                            - **Software validation** Tests the software is what was required and that works
+                            - **Software evolution** Software keeps being updated to satisfy customer and market requirements
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## SE fundamentals
+
+                            Apply to all types of software system
+
+                            1. Systems should be developed using a **development process** depending on the system nature
+                            2. Aim for **high dependability and performance**
+                            3. Understanding and managing the **software specification**
+                            4. **Reuse software** as much as you can rather than build it
+
+                        </script>
+                    </section>
+
+                    <section>
+                        <h2>Questions?</h2>
+                    </section>
+
+                </section>
+
+                <!-- Sources -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Quiz
+
+                            - Teacher tool (in development)
+                            - Access from your devices
+                            - Lets do a test
+                            - Probably at the beginning of lecture
+                            - What do you think?
+
+                        </script>
+
+                    </section>
+                </section>
+
+                <!-- Sources -->
+                <section>
+                    <section style="font-size: medium;" data-markdown>
+                        <script type="text/template">
+                            ## Sources
+
+                            1. Sommerville, I. Software Engineering, 9th edition Addison-Wesley, 2010
+                            1. http://www.slideshare.net/software-engineering-book/ch1-introduction-42645973
+                            1. http://www.cetys.mx/userfiles/calendariosescolares/Calen_PROF_TIJ_2015_2016.pdf
+
+                        </script>
+
+                    </section>
+                </section>
+
+
+
+
+
+
+                <script src="../reveal/lib/js/head.min.js"></script>
+                <script src="../reveal/js/reveal.js"></script>
+
+                <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    {src: '../reveal/lib/js/classList.js', condition: function () {
+                            return !document.body.classList;
+                        }},
+                    {src: '../reveal/plugin/markdown/marked.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/markdown/markdown.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: '../reveal/plugin/zoom-js/zoom.js', async: true},
+                    {src: '../reveal/plugin/notes/notes.js', async: true}
+                ]
+            });
+
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

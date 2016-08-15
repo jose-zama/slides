@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Software process models</title>
+
+        <meta name="description" content="API Gateway - AWS Certification">
+        <meta name="author" content="José Zamudio">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="../reveal/css/reveal.css">
+        <link rel="stylesheet" href="../reveal/css/theme/simple.css" id="theme">     
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+        <style>
+            .device{
+                border-radius: 100% !important;
+                border: none !important;
+            }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="../reveal/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Software process models</h1>
+                    <h3>SI401 - Proceso de Desarrollo de Software</h3>
+                    <h4>Sprint 1 - Lecture 1</h4>
+                    <h4>CETYS</h4>
+                    <p>
+                        <small><a href="http://jose-zama.github.io/">José A. Zamudio</a></small>
+                        <br>
+                        <small><a href="pepeazb@gmail.com">pepeazb@gmail.com</a></small>
+                    </p>
+                </section>
+
+                <!-- Agenda -->
+                <section>
+                    <section data-separator-notes="^Note:" data-markdown>
+                        <script type="text/template">
+                            ## Agenda
+
+                            - Quiz!
+                            - Software process models
+                            - Sprint planning
+
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                        <h1>Quiz</h1>
+                </section>
+
+                <!-- Software process -->
+                <section>
+                    <section>
+                        <h2>Software process models</h2>
+                    </section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Software process
+
+                            Software process:
+
+                            > A structured set of activities required to develop a software system <!-- .element: class="fragment" data-fragment-index="1" -->
+
+                        </script>
+                    </section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Software process
+
+                            And what is required to develop a software system?
+
+                            1. **Specification**
+                                - What the system should do
+                            2. **Design and implementation**
+                                - How to build the system and build it
+                            3. **Validation**
+                                - Check it works and does what the customer wants
+                            4. **Evolution**
+                                - Changing in response to customer needs
+
+                        </script>
+                    </section>
+                </section>
+
+                <!-- Software process models -->
+                <section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Software process models
+
+                            Software process model:
+
+                            > An abstract representation of a process
+
+                            Description of a process from some particular perspective
+
+                        </script>
+                    </section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Software process descriptions
+
+                            - Activities
+                            - Products
+                            - Roles
+                            - Pre and post conditions
+
+                        </script>
+                    </section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Plan driven and agile processes
+
+                            - **Plan driven processes**
+                                - Process activities planned in advance
+                                - Progress measured againts the plan
+                            - **Agile processes**
+                                - Planning is incremental
+                                - Deal much better with requirements change
+
+
+                        </script>
+                    </section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Software process models
+
+                            - **Plan driven processes**
+                                - Process activities planned in advance
+                                - Progress measured againts the plan
+                            - **Agile processes**
+                                - Planning is incremental
+                                - Deal much better with requirements change
+
+                        </script>
+                    </section>
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ## Software process models
+
+                            - **Waterfall model**
+                                - Plan-driven model
+                                - Separate and distinct phases
+                            - **Incremental development**
+                                - Plan-driven or agile
+                                - Interleaved phases
+                            - **Integration and configuration**
+                                - Plan-driven or agile
+                                - System assembled from existing components
+
+                        </script>
+                    </section>
+                </section>
+
+
+                <!-- Waterfall -->
+                <section>
+                    <section>
+                        <h1>Waterfall model</h1>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Waterfall
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="607px" height="388px" version="1.1" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/601.4.4 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4&quot; version=&quot;5.5.5.8&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;7Vjfb+I4EP5reNwVIYW2r+11uyfd6qTlYXcfTTIkvjqerOMscH99x8k4P6CtQAEkJHhAns92MvPNfBkno/AxWz8bkaffMAY1mozj9Sj8azSZ3N3P6N8BmxqYzcY1kBgZ11DQAnP5PzDol5UyhqK30CIqK/M+GKHWENkeJozBVX/ZElX/rrlI/B1bYB4JtYv+kLFNOawpu+fwryCT1N85GPPMQkQvicFS8/1Gk3BZ/erpTPhr8foiFTGuOlD4RLQaRLqyG2XrR1COWk9bve/LO7ON3wY0+/bxBpqq3LAbHzrExASbaGyKCWqhnlr0oQoP3AXGZKU2UzQMaAhraX92xr/cks9Tsv4DazecZlFaJKi99j+IOe+qvXEu9OIpsDQRQyGXgzAJcIjT3airjRzyM2AG1mxoCdfnxKeLy/OWTcFlkzQ7WupowOy9zST79Ueokj39Dr9LaSAjpwqnBVhKLa1EPZrMFPn5sDA0StxoJwstx46WVSotzHNRcbAixfV5b4rIGYkShQvD5SbCTEY8VmIB6qEpz0dUaGhKo3Y5LazBl6bWQ0KWqC1nLJix7TdRVY+rH+G5ElJ/WrioawLAWGCe3yjHjxNz18/LDZurVoOBV07a0Z9/ugzJ383FKYHLvquE+0MJDz2dzHjgH3FDqGTHOlKYbwoLmbssPRhdFEu7Ih8rVRQyuSpi70dVU//n0AR38QvSxO2uJgJW9v6cTz13zHnojyVDuGTPOqL4W1tIjKg7gleGF4qFwkqdXIXxXpJufHPgJDW94xzCuLs4YXBn6AqDK3IA5eERqGTHurrIclWdmvrSKOnwdBXG4S296SDnEIZ/Uh5XGQ7uK4O4MJtqqjXdrNt1RNX43jFINtOtFh56GQ0i2nt7YqJPTObhB9atV4TjVO1JXoPPTubh78FbB53AkzuITH4TvnAyOYr9yQy2umPzTWgQmexZpz3+m8PWoTGj7mFBC03xXNvivod6b5+gLZLZfsKr5jqfScOnVw==&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);"><defs><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-dae8fc-1-7ea6e0-1-s-0"><stop offset="0%" style="stop-color:#DAE8FC"/><stop offset="100%" style="stop-color:#7EA6E0"/></linearGradient></defs><g transform="translate(0.5,0.5)"><path d="M 122 32 L 182 32 L 182 75.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 182 80.88 L 178.5 73.88 L 182 75.63 L 185.5 73.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="2" y="2" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" stroke-width="3" transform="translate(2,3)" opacity="0.25"/><rect x="2" y="2" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-width="3" pointer-events="none"/><g transform="translate(4.5,13.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="114" height="36" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 16px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 114px; white-space: normal; word-wrap: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Requirements definition<br xmlns="http://www.w3.org/1999/xhtml" /></div></div></foreignObject><text x="57" y="26" fill="#000000" text-anchor="middle" font-size="16px" font-family="Helvetica">Requirements definition&lt;br&gt;</text></switch></g><path d="M 242 112 L 302 112 L 302 155.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 302 160.88 L 298.5 153.88 L 302 155.63 L 305.5 153.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="122" y="82" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" stroke-width="3" transform="translate(2,3)" opacity="0.25"/><rect x="122" y="82" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-width="3" pointer-events="none"/><g transform="translate(124.5,93.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="114" height="36" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 16px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 114px; white-space: normal; word-wrap: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">System and software design<br xmlns="http://www.w3.org/1999/xhtml" /></div></div></foreignObject><text x="57" y="26" fill="#000000" text-anchor="middle" font-size="16px" font-family="Helvetica">System and software design&lt;br&gt;</text></switch></g><path d="M 482 272 L 542 272 L 542 315.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 542 320.88 L 538.5 313.88 L 542 315.63 L 545.5 313.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="362" y="242" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" stroke-width="3" transform="translate(2,3)" opacity="0.25"/><rect x="362" y="242" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-width="3" pointer-events="none"/><g transform="translate(364.5,253.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="114" height="36" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 16px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 114px; white-space: normal; word-wrap: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Integration and system testing<br xmlns="http://www.w3.org/1999/xhtml" /></div></div></foreignObject><text x="57" y="26" fill="#000000" text-anchor="middle" font-size="16px" font-family="Helvetica">Integration and system testing&lt;br&gt;</text></switch></g><path d="M 362 192 L 422 192 L 422 235.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 422 240.88 L 418.5 233.88 L 422 235.63 L 425.5 233.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="242" y="162" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" stroke-width="3" transform="translate(2,3)" opacity="0.25"/><rect x="242" y="162" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-width="3" pointer-events="none"/><g transform="translate(244.5,173.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="114" height="36" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 16px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 114px; white-space: normal; word-wrap: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Implementation and unit testing<br xmlns="http://www.w3.org/1999/xhtml" /></div></div></foreignObject><text x="57" y="26" fill="#000000" text-anchor="middle" font-size="16px" font-family="Helvetica">Implementation and unit testing&lt;br&gt;</text></switch></g><path d="M 482 352 L 422 352 L 422 308.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 422 303.12 L 425.5 310.12 L 422 308.37 L 418.5 310.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 482 352 L 302 352 L 302 228.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 302 223.12 L 305.5 230.12 L 302 228.37 L 298.5 230.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 482 352 L 182 352 L 182 148.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 182 143.12 L 185.5 150.12 L 182 148.37 L 178.5 150.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 482 352 L 62 352 L 62 68.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 62 63.12 L 65.5 70.12 L 62 68.37 L 58.5 70.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="482" y="322" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" stroke-width="3" transform="translate(2,3)" opacity="0.25"/><rect x="482" y="322" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-width="3" pointer-events="none"/><g transform="translate(484.5,333.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="114" height="36" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 16px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 114px; white-space: normal; word-wrap: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Operation and maintenance<br xmlns="http://www.w3.org/1999/xhtml" /></div></div></foreignObject><text x="57" y="26" fill="#000000" text-anchor="middle" font-size="16px" font-family="Helvetica">Operation and maintenance&lt;br&gt;</text></switch></g></g></svg>
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Waterfall
+
+                            - Each phase must be finished before moving onto the next one
+                            - **Difficult to respond to requirements changes**
+                            - Only use when **requirements are well understood**
+                            - Mostly used on large systems engineering projects where a system is developed at several sites
+                                - Helps to coordinate work
+
+                        </script>
+                    </section>
+
+                </section>
+
+                <!-- Waterfall -->
+                <section>
+                    <section>
+                        <h2>Incremental development model</h2>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Incremental
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="573px" height="383px" version="1.1" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/601.4.4 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4&quot; version=&quot;5.5.5.8&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;5VrLkuo2EP0alklhGxhmO8+kalJ3QVWSuxS2sJXIlksWr/v1I5luW36EOwO2wwALkLr1aB0djtWCkfcY714lSaM/RED5yB0Hu5H3NHLd+f1MvxvD/mCYzb2DIZQsOJic0rBgPygYx2Bds4BmlYZKCK5YWjX6Ikmoryo2IqXYVputBK/OmpIQZywNC5/wpvUvFqgIljWF8Iz9N8rCCGd2xuBZEv/fUIp1AvONXG+Vvw7umOBY0D6LSCC2lsl71rBKIfTIphTvHik30CJsh34v/+Et4pY0gdiOd9CuPAy1x6XTQCMBVSFVJEKREP5cWh/y5VEzwFjXIhVzXXR08R+q1B42k6yV0KZyhDchUmi3EonCKSBiM2tlCZlYSx9MwB1FZEgRcbDZK817wjJfqYipknvdBDjp4hYBJV0P6gS4EhZdSrx0ASBrhw+i2BC+hli/rRVnCTXcp5kvWaqYSBoglxAaPLYRU3SRkny9W/2FqsKacsKSX5b5FG3YbahUFFbZQoDjsMxrqCBK25L2DpI1sig/6wC9SZfkozum/jbmX90pVL9DKw2F3Ns+UzfOPkkLCngeaT0URNyeLmCf9gE7lnPMLZhz2G3MwTkg7Ljgj8M+qWmF58EQ58AOkVla8SfhLCAXLhB1hfBQDYZQiLt+FOLOVojcVSrEwVewtUeq3neiEHfV7XEmHcA+v2aFaIMdvpunK8R9BwIBgVkCsUipz1bM/2oagdUhJAKfkNd5ikBBsNkKPDn9FNGJRjgY7VVqcxvunxaJujZ3w/dOU7ZLE+c23DHLOl2dXacDecbQLH1+ohvKRRqbsL6OOg+a4zmQ5FmoPYrEX8s8ej22r9iGKaZve+oIZlsWc6Jz6Z/CV6V3cadiKr6ImQ/lkJPMLMV0wcHfTLJub0Ioicap+03AFAKP0c09KB5l9h54uHlnbUIvKV+uC4VmlNpc6EmpGbmzN81oyfk+/YysS4aDWeNZuDdzvt8TTXZiGmk6ZZd9rJvWzg2DHusg9bOgayBlLloNHh9bN9wVkyV2Ly5zT8WjVUjxbGUD0sl3GJKyCpcUlTENGFH6wnFGYgNGsszMh65zPftDwDa6GJoiEE4L7cGlZ7S8/y8P890+cndbw31AHjazspuBvZ42DAg7jntTsA8CLIZ4lcAel288c6GMDKkj+Pi6Rdzr8j2okDSztpvB/SPHld5w7+fHvQtJOTA5OOt6qPEr06yDlAMjs/j+wvRiv0bCUVOKQX9rwg28UsZ28ieKxsXa5POU1dXy/y25z/oPkff8Dg==&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);"><defs><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-dae8fc-1-7ea6e0-1-s-0"><stop offset="0%" style="stop-color:#DAE8FC"/><stop offset="100%" style="stop-color:#7EA6E0"/></linearGradient><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-f5f5f5-1-b3b3b3-1-s-0"><stop offset="0%" style="stop-color:#F5F5F5"/><stop offset="100%" style="stop-color:#B3B3B3"/></linearGradient><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-ffffff-0.9-ffffff-0.1-s-0"><stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9"/><stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1"/></linearGradient></defs><g transform="translate(0.5,0.5)"><path d="M 121 201 L 194.63 201" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 199.88 201 L 192.88 204.5 L 194.63 201 L 192.88 197.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="1" y="171" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(6.5,194.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="109" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 110px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Outline description</div></div></foreignObject><text x="55" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Outline description</text></switch></g><path d="M 231 291 L 231 237.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 231 232.12 L 234.5 239.12 L 231 237.37 L 227.5 239.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 321 306 L 434.63 306" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 439.88 306 L 432.88 309.5 L 434.63 306 L 432.88 302.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="201" y="291" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(232.5,314.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="57" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 58px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Validation</div></div></foreignObject><text x="29" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Validation</text></switch></g><path d="M 291 111 L 291 164.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 291 169.88 L 287.5 162.88 L 291 164.63 L 294.5 162.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 321 66 L 424.63 66" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 429.88 66 L 422.88 69.5 L 424.63 66 L 422.88 62.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="201" y="51" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(223.5,74.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="75" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Specification</div></div></foreignObject><text x="38" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Specification</text></switch></g><path d="M 231 171 L 231 117.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 231 112.12 L 234.5 119.12 L 231 117.37 L 227.5 119.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 291 231 L 291 284.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 291 289.88 L 287.5 282.88 L 291 284.63 L 294.5 282.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 321 186 L 424.63 186" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 429.88 186 L 422.88 189.5 L 424.63 186 L 422.88 182.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="201" y="171" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(223.5,194.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="75" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Development</div></div></foreignObject><text x="38" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Development</text></switch></g><path d="M 156 24 L 156 1 L 366 1 L 366 24 Z" fill="url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0)" stroke="#666666" stroke-miterlimit="10" pointer-events="none"/><path d="M 156 24 L 156 381 L 366 381 L 366 24" fill="none" stroke="#666666" stroke-miterlimit="10" pointer-events="none"/><path d="M 155 0 L 155 10.2 Q 261 17.1 367 10.2 L 367 0 Z" fill="url(#mx-gradient-ffffff-0.9-ffffff-0.1-s-0)" stroke="none" pointer-events="none"/><g transform="translate(201.5,7.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="119" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 120px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Concurrent activities</div></div></foreignObject><text x="60" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Concurrent activities</text></switch></g><path d="M 431 96 L 327.37 96" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 322.12 96 L 329.12 92.5 L 327.37 96 L 329.12 99.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="431" y="51" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(452.5,74.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="77" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 78px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Initial version</div></div></foreignObject><text x="39" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Initial version</text></switch></g><rect x="451" y="191" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(473.5,207.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="75" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Intermediate <div xmlns="http://www.w3.org/1999/xhtml">versions</div></div></div></foreignObject><text x="38" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">[Not supported by viewer]</text></switch></g><rect x="441" y="181" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(463.5,197.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="75" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Intermediate <div xmlns="http://www.w3.org/1999/xhtml">versions</div></div></div></foreignObject><text x="38" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">[Not supported by viewer]</text></switch></g><rect x="431" y="171" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(453.5,187.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="75" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 76px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Intermediate <div xmlns="http://www.w3.org/1999/xhtml">versions</div></div></div></foreignObject><text x="38" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">[Not supported by viewer]</text></switch></g><path d="M 441 336 L 327.37 336" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 322.12 336 L 329.12 332.5 L 327.37 336 L 329.12 339.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="441" y="291" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(463.5,314.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="74" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 75px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Final version</div></div></foreignObject><text x="37" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Final version</text></switch></g><path d="M 431 216 L 327.37 216" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 322.12 216 L 329.12 212.5 L 327.37 216 L 329.12 219.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Incremental
+
+                            - Cost of accommodating changing requirements is reduced
+                            - Easier to get customer feedback on the development done
+                            - More rapid delivery and deployment of useful software
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## However...
+
+                            - System structure tends to degrade as new increments are added
+                                - Requires refactoring to keep high quality code
+                                - Software changes becomes increasingly difficult and costly
+
+                        </script>
+                    </section>
+
+                </section>
+
+                <!-- Integration and configuration -->
+                <section>
+                    <section>
+                        <h2>Integration and configuration model</h2>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Integration and configuration
+
+                            - Based on software reuse
+                            - Systems integrated from existing components
+                            - COTS -> Commercial off-the-shelf
+                            - Components may be configured
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Integration and configuration
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="755px" height="393px" version="1.1" content="&lt;mxfile userAgent=&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/601.4.4 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4&quot; version=&quot;5.5.5.8&quot; editor=&quot;www.draw.io&quot; type=&quot;google&quot;&gt;&lt;diagram&gt;5VpNk6M2EP01PmYKjO2dOe54ZzapylZtxYckRw0IUFYgIuSv/PqVoBuEzLjsgEnF64NLagnUev301JI9C9bZ4bMkRfpFRJTP5l50mAWfZvP549NKfxvDsTasHoPakEgW1Sa/NWzYPxSMHli3LKJlp6MSgitWdI2hyHMaqo6NSCn23W6x4N1RC5LgiK1hExJ+av2dRSqFaS3BPWP/mbIkxZF9D1reSPgtkWKbw3izeRBXn7o5I/gu6F+mJBJ7yxS8aFilEPrNppQd1pQbaBG2+rnXd1obvyXNwbfzD+imyg11xKnTSCMBVSFVKhKRE/7SWp+r6VHzAk/XUpVxXfR1kR6Y+sMq/2m6PCxNLVfyaJrME1WlbfuLKnUECpCtEtrUjvurEAW8sfbUuNeZaym2MgTTAqhCZEJh+kBEG5HqQYDjMxUZ1e7oLsBdfwGhAer6H6BOgFNJ80iLqy4AtP0wA/vvF+bHoTDPgxFgBsd2hG/B1d/o31smaaa9KmfzFde+PUdsp4uJKZYFDVnMQqKYyLFdj2J1OYlcGxcD1z5lim4KUmGz12LYjVWzvk0l4aQ0szPRCUXGQigXnLD8p7fK6edY5AqJAdjvqFQUcbsWaFQaxBmVat/qmo99UkvTViPEY3lXtAcpsWnvXx2OALe4MeUFPLN4vxGx2munejgfsTIUmlJ6hHvku//kAIxCMwXhP9wV4UHUxyX8KEIPnl1GeGq63bHCu4xvmDwF459uwXhgOXK+w/h2AWDbiIxHetuUh6Ti8ng8OgKE0PfBXL3ko5TEPI8dCsGqdKUZ46sxtAMscAk5IzRJvtP/HYfaCNcOtPFu5nQRBXCBW6txTFLcOLw+JCmXx3fhrrcxFA1duzx3lTRmedV6n7IWYGb0X2Su/k0Oxj26pstfqWTaQSpPtO6muzsSv7MYrj4uL/FOZMx81r/JebmLPra46F+KsKH7WnBhntO3PK/VZwDyV5+gF+76wEgMQh52ux8IeZSQf8/5cZAH187toqWS4ltzI6k9dBS7MP2yQ2LuZB9iLvZhSqR6iPQlR2nS337V7+4L1wr/cKFfOulMk1BYQo+HOFvn0TYI9dOj81rkMUu25ijhkaLgze2QVx5LRbMJ9tXuVopwJ5JS7cZgvFeuZE95QvZvckQ+FZgxN8qec/D1qLtyHWAWOQjN04Pwx4gUJvfXfCpEXueO/+9EcOHcIASoF5PwdYIDbtUyzQEXYRrGZXcDHIXL6JrF5U90R7me3tzL6f6uOL101WBKTqO7FtK/5IrqtEGZTe9Otjn3mL6YcpvD5M0W5t5cwiM7wjh50yC4gFtw9qGNSFZwnySGBttXkjFuZr+uus69Dcn1yvG+bHrA72pWEz9TseNXx0hIkmuVGWEdOD9PNQGxg4T6bwcpgHR5UJDgmNlJ/lqF+dFDswKIz10ro2zZoTl33/lOaHS1/c9DfQXZ/q8kePkO&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);"><defs><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-dae8fc-1-7ea6e0-1-s-0"><stop offset="0%" style="stop-color:#DAE8FC"/><stop offset="100%" style="stop-color:#7EA6E0"/></linearGradient><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-d5e8d4-1-97d077-1-s-0"><stop offset="0%" style="stop-color:#D5E8D4"/><stop offset="100%" style="stop-color:#97D077"/></linearGradient><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-ffcd28-1-ffa500-1-s-0"><stop offset="0%" style="stop-color:#FFCD28"/><stop offset="100%" style="stop-color:#FFA500"/></linearGradient></defs><g transform="translate(0.5,0.5)"><path d="M 121 118 L 146 118 L 146 58 L 164.63 58" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 169.88 58 L 162.88 61.5 L 164.63 58 L 162.88 54.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 121 118 L 146 118 L 146 178 L 164.63 178" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 169.88 178 L 162.88 181.5 L 164.63 178 L 162.88 174.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="1" y="88" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="1" y="88" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(20.5,104.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="80" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 81px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Requirements<div xmlns="http://www.w3.org/1999/xhtml">specification</div></div></div></foreignObject><text x="40" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">[Not supported by viewer]</text></switch></g><path d="M 291 58 L 321 58 L 321 118 L 344.63 118" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 349.88 118 L 342.88 121.5 L 344.63 118 L 342.88 114.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="171" y="28" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="171" y="28" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(202.5,44.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="56" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 57px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Software<div xmlns="http://www.w3.org/1999/xhtml">discovery</div></div></div></foreignObject><text x="28" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">[Not supported by viewer]</text></switch></g><path d="M 291 178 L 321 178 L 321 118 L 344.63 118" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 349.88 118 L 342.88 121.5 L 344.63 118 L 342.88 114.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="171" y="148" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="171" y="148" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(201.5,164.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="59" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 60px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Software<div xmlns="http://www.w3.org/1999/xhtml">evaluation</div></div></div></foreignObject><text x="30" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">[Not supported by viewer]</text></switch></g><path d="M 411 88 L 411 8 L 61 8 L 61 81.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 61 86.88 L 57.5 79.88 L 61 81.63 L 64.5 79.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 471 118 L 504.63 118" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 509.88 118 L 502.88 121.5 L 504.63 118 L 502.88 114.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="351" y="88" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="351" y="88" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(370.5,104.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="80" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 81px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Requirements<div xmlns="http://www.w3.org/1999/xhtml">refinement</div></div></div></foreignObject><text x="40" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Requirements&lt;div&gt;refinement&lt;/div&gt;</text></switch></g><path d="M 531 98 L 531 58 L 624.63 58" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 629.88 58 L 622.88 61.5 L 624.63 58 L 622.88 54.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 531 138 L 531 178 L 451 178 L 451 211.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 451 216.88 L 447.5 209.88 L 451 211.63 L 454.5 209.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 531 138 L 531 178 L 611 178 L 611 211.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 611 216.88 L 607.5 209.88 L 611 211.63 L 614.5 209.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 531 98 L 551 118 L 531 138 L 511 118 Z" fill="#000000" stroke="#000000" stroke-width="2" stroke-miterlimit="10" transform="translate(2,3)" opacity="0.25"/><path d="M 531 98 L 551 118 L 531 138 L 511 118 Z" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><rect x="631" y="28" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="631" y="28" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-d5e8d4-1-97d077-1-s-0)" stroke="#82b366" pointer-events="none"/><g transform="translate(632.5,44.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="116" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 116px; white-space: normal; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Configure application system</div></div></foreignObject><text x="58" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Configure application system</text></switch></g><path d="M 451 278 L 451 303 L 531 303 L 531 321.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 531 326.88 L 527.5 319.88 L 531 321.63 L 534.5 319.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="391" y="218" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="391" y="218" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(396.5,241.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="109" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 110px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Adapt components</div></div></foreignObject><text x="55" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Adapt components</text></switch></g><path d="M 611 278 L 611 303 L 531 303 L 531 321.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 531 326.88 L 527.5 319.88 L 531 321.63 L 534.5 319.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="551" y="218" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="551" y="218" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-dae8fc-1-7ea6e0-1-s-0)" stroke="#6c8ebf" pointer-events="none"/><g transform="translate(552.5,234.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="116" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 116px; white-space: normal; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Develop new components</div></div></foreignObject><text x="58" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Develop new components</text></switch></g><rect x="471" y="328" width="120" height="60" rx="9" ry="9" fill="#000000" stroke="#000000" transform="translate(2,3)" opacity="0.25"/><rect x="471" y="328" width="120" height="60" rx="9" ry="9" fill="url(#mx-gradient-d5e8d4-1-97d077-1-s-0)" stroke="#82b366" pointer-events="none"/><g transform="translate(483.5,351.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="95" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 96px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Integrate system</div></div></foreignObject><text x="48" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Integrate system</text></switch></g><path d="M 501 8 L 501 8.65 L 511 7.61 L 521 8.46 L 531 7.45 L 541 8.09 L 551 7.96 L 561 8.37 L 571 8.13 L 581 8.33 L 591 7.41 L 601 8.52 L 611 8 L 610.85 8 L 611.15 15 L 611.24 22 L 611.21 29 L 610.95 36 L 611 43 L 611 43.24 L 601 43.11 L 591 42.95 L 581 42.58 L 571 43.72 L 561 43.6 L 551 43.29 L 541 42.74 L 531 42.89 L 521 42.6 L 511 43.27 L 501 43 L 501 43 L 501.22 36 L 500.82 29 L 500.93 22 L 501.08 15 L 501 8 L 501 8 Z Z" fill="url(#mx-gradient-ffcd28-1-ffa500-1-s-0)" stroke="#d79b00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(502.5,11.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="105" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: 'Comic Sans MS'; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 105px; white-space: normal; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Application system available</div></div></foreignObject><text x="53" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Comic Sans MS" font-weight="bold">Application system available</text></switch></g><path d="M 546 148 L 546 147.65 L 556 147.94 L 566 147.37 L 576 147.38 L 586 147.91 L 596 148.45 L 606 148.43 L 616 148.67 L 626 147.66 L 636 147.95 L 646 148.64 L 656 148.35 L 666 147.98 L 676 148 L 675.92 148 L 675.95 152 L 675.93 156 L 676.23 160 L 675.92 164 L 676 168 L 676 167.46 L 666 168.74 L 656 168.5 L 646 167.88 L 636 167.75 L 626 167.85 L 616 168.14 L 606 168.62 L 596 167.87 L 586 167.45 L 576 167.34 L 566 168.61 L 556 168.15 L 546 168 L 546.1 168 L 545.86 164 L 545.99 160 L 546.01 156 L 546.19 152 L 546 148 L 546 148 Z Z" fill="url(#mx-gradient-ffcd28-1-ffa500-1-s-0)" stroke="#d79b00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(549.5,151.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="121" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: 'Comic Sans MS'; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 122px; white-space: nowrap; word-wrap: normal; font-weight: bold; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Components available</div></div></foreignObject><text x="61" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Comic Sans MS" font-weight="bold">Components available</text></switch></g></g></svg>
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Process stages
+
+                            - Requirements specification
+                            - Software discovery and evaluation
+                            - Requirements refinement
+                            - Application system configuration
+                            - Component adaptation and integration
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Types of reusable software
+
+                            - Stand-alone applications (COTS)
+                            - Collections of objects for a component framework
+                                - .NET
+                                - J2EE
+                            - Web services
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Pros and cons
+
+                            - Reduces costs and risks. Less software es developed from scratch
+                            - Faster delivery and deployment of system
+                            - System may not meet real need of users
+                            - Loss of control over evolution of reused system elements
+                                - Updates of components may affect system
+
+                        </script>
+                    </section>
+
+
+                </section>
+
+                <!-- Sprint planning -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Lets do sprint planning
+
+                            1. Teams setup
+                            1. Choose a PO
+                            1. Review product backlog
+                            1. PO will decide the requirements to work on the sprint
+                                - With feedback of all team
+                            1. Create tasks for sprint backlog
+                            1. Estimate
+                            1. Review sprint backlog and add or remove tasks
+
+                        </script>
+
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Remember each sprint
+
+                            - Do your daily scrum
+                            - Constantly update the burndown chart
+                            - and build the product!
+
+                        </script>
+
+                    </section>
+                </section>
+
+
+                <!-- Source -->
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Sources
+
+                            1. Sommerville, I. Software Engineering, 9th edition Addison-Wesley, 2010
+
+                        </script>
+
+                    </section>
+                </section>
+
+                <script src="../reveal/lib/js/head.min.js"></script>
+                <script src="../reveal/js/reveal.js"></script>
+
+                <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    {src: '../reveal/lib/js/classList.js', condition: function () {
+                            return !document.body.classList;
+                        }},
+                    {src: '../reveal/plugin/markdown/marked.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/markdown/markdown.js', condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: '../reveal/plugin/zoom-js/zoom.js', async: true},
+                    {src: '../reveal/plugin/notes/notes.js', async: true}
+                ]
+            });
+
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
